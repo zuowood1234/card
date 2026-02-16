@@ -131,8 +131,37 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
             font-size: 1.2rem;
         }
+
+        /* --- 手机端适配 (Mobile Optimization) --- */
+        @media (max-width: 600px) {
+            #start-btn {
+                padding: 10px 30px;
+                font-size: 18px;
+                /* 按钮字小一点 */
+            }
+
+            .typewriter p {
+                font-size: 0.95rem;
+                /* 正文字体调小 */
+                margin: 6px 0;
+            }
+
+            .golden {
+                font-size: 1.2rem;
+                /* 金色大字也调小 */
+            }
+
+            .red-stock {
+                font-size: 1.0rem;
+            }
+
+            #final-text {
+                width: 95%;
+                /* 手机两边留白少一点 */
+            }
+        }
     </style>
-  <script type="module" crossorigin src="/card/assets/index-D2hy88R8.js"></script>
+  <script type="module" crossorigin src="/card/assets/index-7T8JLJo0.js"></script>
 </head>
 
 <body>
@@ -168,8 +197,8 @@
         </div>
     </div>
 
-    <!-- 音乐和 JS 必须改为相对路径 "./..." 才能在 Github Pages 子目录下正确加载 -->
-    <audio id="bgm" loop>
+    <!-- 音乐优化：preload="auto" 预加载 -->
+    <audio id="bgm" loop preload="auto">
         <source src="./bgm.mp3" type="audio/mpeg">
     </audio>
 

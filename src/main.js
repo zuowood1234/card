@@ -42,6 +42,15 @@ particleManager.init(); // Pre-calculates heart points for smooth performance
 const startBtn = document.getElementById('start-btn');
 const finalContainer = document.getElementById('final-text');
 
+// 微信浏览器音频加载优化 (WeChat Audio Hack)
+// 在微信桥接准备好时，静默触发一次 load，让音频进入缓冲区
+document.addEventListener("WeixinJSBridgeReady", function () {
+    const bgm = document.getElementById('bgm');
+    if (bgm) {
+        bgm.load();
+    }
+}, false);
+
 // Function to Start App
 async function startApp() {
     // 0. Play Music Fade In
