@@ -1,11 +1,11 @@
-export default {
-  root: './',
-  publicDir: 'public',
+
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/card/', // 设置为您的 GitHub 仓库名
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-  },
-  server: {
-    host: true
+    assetsDir: 'assets',
+    sourcemap: false
   }
-}
+});
