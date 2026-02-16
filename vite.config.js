@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/card/', // 设置为您的 GitHub 仓库名
+  base: '/card/', // Github Pages 的仓库名
   build: {
-    outDir: 'dist',
+    outDir: 'docs', // 输出到 docs 文件夹
     assetsDir: 'assets',
     sourcemap: false
   }
