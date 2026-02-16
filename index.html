@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>新年祝福</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Serif+SC:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #050510;
+            font-family: 'Noto Serif SC', serif;
+        }
+
+        #start-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 40px;
+            font-size: 24px;
+            color: #fff;
+            background: rgba(255, 100, 150, 0.2);
+            border: 1px solid rgba(255, 200, 220, 0.5);
+            border-radius: 50px;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+            transition: all 0.5s ease;
+            z-index: 100;
+            letter-spacing: 2px;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+        }
+
+        #start-btn:hover {
+            background: rgba(255, 100, 150, 0.4);
+            box-shadow: 0 0 50px rgba(255, 105, 180, 0.8);
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        #final-text {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            pointer-events: none;
+            width: 90%;
+            max-width: 800px;
+            text-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+            z-index: 10;
+        }
+
+        /* 每一行文字 */
+        .typewriter p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 8px 0;
+            opacity: 0;
+            color: #FFFFFF;
+            /* 改为纯白，更清晰 */
+            font-weight: 500;
+            /* 增加黑色半透明阴影，防背景干扰 */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* 强调文字（浅黄色） */
+        .highlight {
+            color: #FFE4B5 !important;
+        }
+
+        /* 
+           终极流光金 (Ultimate Shining Gold) 
+           使用多重阴影制造"发光粒子感"
+        */
+        .golden {
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: inline-block;
+            /* Essential for transform */
+
+            /* 核心：纯白亮心 + 金色外晕 */
+            color: #FFFFFF;
+            text-shadow:
+                0 0 5px #FFD700,
+                0 0 10px #FFD700,
+                0 0 20px #FFA500,
+                0 0 40px #FF8C00;
+
+            animation: pulse-shine 2s infinite alternate;
+        }
+
+        @keyframes pulse-shine {
+            from {
+                text-shadow:
+                    0 0 5px #FFD700,
+                    0 0 10px #FFD700,
+                    0 0 20px #FFA500;
+                transform: scale(1.0);
+            }
+
+            to {
+                text-shadow:
+                    0 0 10px #FFF,
+                    0 0 20px #FFD700,
+                    0 0 40px #FFA500,
+                    0 0 60px #FF4500;
+                /* Red-gold flare */
+                transform: scale(1.05);
+                /* Slight breathe */
+            }
+        }
+
+        @keyframes shine {
+            to {
+                background-position: -200% center;
+            }
+        }
+
+        /* 股市正红 (Stock Market Red) */
+        .red-stock {
+            color: #FF0000 !important;
+            /* Pure Red */
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start-btn">开启春节祝福</button>
+
+    <div id="final-text" style="display: none;">
+        <div class="typewriter">
+            <!-- ========== 文字开始 ========== -->
+
+            <p style="margin-bottom: 20px;">2025年，三十而已，<br>2026年，四十未至。</p>
+
+            <p style="margin-bottom: 20px;">四十而不惑，<br>那我们在四十岁未到来之前，<br>就尽情地去困惑，去探索吧。</p>
+
+            <p>以小鹿脱口秀的结尾为赠，</p>
+            <p>它是你独自走过那么多难熬的日日夜夜才抵达的，</p>
+            <p>它值得你喜欢，</p>
+            <p>你应该为现在的自己感到骄傲，</p>
+            <p style="margin-top: 10px;">现在就是你<span class="golden">最好的时代</span>。</p>
+
+
+            <p style="margin-top: 20px;">祝张张在自己的“中男”时代里</p>
+
+            <!-- 增加空行 -->
+            <p style="margin-top: 20px;">心有所想皆如意，</p>
+            <p>手有<span class="red-stock">涨停</span>尽可期，</p>
+            <p>飞驰人生正当时。</p>
+
+            <p style="margin-top: 30px; font-weight: bold;">2026年春节快乐～～</p>
+
+            <!-- 署名右对齐 -->
+            <p style="margin-top: 20px; text-align: right; padding-right: 15%;">2026.2.17 贝果🥯赠</p>
+
+            <!-- ========== 文字结束 ========== -->
+        </div>
+    </div>
+
+    <!-- 背景音乐 (您替换 src 即可) -->
+    <!-- 您的本地背景音乐 -->
+    <audio id="bgm" loop>
+        <source src="/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

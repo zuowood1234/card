@@ -1,0 +1,76 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+  /* Center content */
+}
+
+/* Cute Number Overlay */
+.number-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 15rem;
+  /* Huge */
+  font-weight: 900;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  color: #fff;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 105, 180, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+  z-index: 10;
+  background: linear-gradient(to bottom right, #ff9a9e, #fecfef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.number-overlay.visible {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Jelly bounce animation keyframes if needed */
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* Specific styling for '1' to match sparkler position */
+#number-1 {
+  /* We might need to adjust position to align with sparkler particle origin (0,0,0) */
+  /* Since CSS is 2D and Three.js is 3D, we'll just align visually. */
+  transform-origin: center bottom;
+}
